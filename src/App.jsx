@@ -1,11 +1,13 @@
 import './App.scss';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+
 
 function App() {
   return (
     <>
-      <header className="Header">
-        <h1></h1>
-      </header>
+      <Header />
+      <Hero />
     </>
   );
 }

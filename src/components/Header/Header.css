@@ -1,0 +1,30 @@
+import .Header {
+  padding: 0px 16px;
+  text-align: center;
+}
+import .Header__logo {
+  width: 120px;
+  height: 25px;
+  background-color: white;
+}
+import .Header__MohanMuruge {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30%;
+     object-position: 30%;
+}
+import .Header__upload__btn {
+  background-image: url(../../assets/images/Icons/upload.svg);
+  background-color: #0095ff;
+  border-radius: 4px;
+  height: 40px;
+}
+import .Header__upload__btn > a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}/*# sourceMappingURL=Header.css.map */
