@@ -1,0 +1,15 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Video__list {
+    padding: 0px 16px;
+
+    &__title {
+        color: $primary-third;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 16px 0px 8px;
+    }
+}

@@ -1,0 +1,40 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Video__card {
+    
+    &__item {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        margin: 8px 0px;
+    }
+
+    &__image {
+        width: 100px;
+        height: 60px;
+        border-radius: 4px;
+    }
+
+    &__content {
+        width: 60%;
+        font-size: 13px;
+        line-height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 600;
+        line-height: 18px;
+        // height: 36px;
+        // overflow: hidden;
+        // white-space: wrap;
+        // // text-overflow: ellipsis;
+    }
+
+    &__channel {
+        font-weight: 400;
+    }
+}

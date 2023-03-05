@@ -1,15 +1,17 @@
 import './Hero.scss';
 
-function Hero() {
+function Hero({videosDetail}) {
+    
     return (
-        <div>
-        <video controls
-        className='Hero__video'
-        poster='https://i.imgur.com/l2Xfgpl.jpg'
-        src="https://project-2-api.herokuapp.com/stream">
-        </video>
-        </div>
-        );
+        <section className='hero'>
+            <video controls
+                className='hero__video'
+                key={videosDetail.id}
+                poster={videosDetail.image}
+                src={videosDetail.video}>
+            </video>
+        </section> 
+    );
 }
 
 export default Hero;
