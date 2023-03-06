@@ -7,7 +7,6 @@ function CommentInput () {
     return (
         <>
         <section className='comment__input'>
-            <p className='comment__input__count'>3 comments</p>
             <div className='comment__input__container'>
                 <div className='comment__input__MohanMuruge'>
                     <img src={MohanMuruge} alt="Mohan Muruge" />

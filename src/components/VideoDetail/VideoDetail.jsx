@@ -15,6 +15,7 @@ function VideoDetail ({videosDetail}) {
                     <p className='current__video__likes'>{videosDetail.likes}</p>
                 </div>
                 <p className='current__video__description'>{videosDetail.description}</p>
+                <p className='current__video__count'>{videosDetail.comments.length} comments</p>
 
                 <CommentInput videosDetail={videosDetail} />
                 <CommentsList videosDetail={videosDetail} />       
