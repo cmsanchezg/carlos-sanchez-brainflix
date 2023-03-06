@@ -23,8 +23,10 @@ function App() {
     <>
       <Header />
       <Hero videosDetail={videosDetail} />
-      <VideoDetail videosDetail={videosDetail} />
-      <VideoList videosDetailId={videosDetail.id} SelectedVideo={SelectedVideo} />
+      <main className='main'>
+        <VideoDetail videosDetail={videosDetail} />
+        <VideoList videosDetailId={videosDetail.id} SelectedVideo={SelectedVideo} />
+      </main>
     </>
   );
 }

@@ -1,6 +1,17 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.hero__video {
-    width: 100%;
+.hero {
+    background-color: black;
+    text-align: center;
+    &__video {
+        width: 100%;
+        background-color: black;
+        @include tablet {
+            width: 90%;
+        }
+        @include desktop {
+            width: 65%;
+        }
+    }
 }

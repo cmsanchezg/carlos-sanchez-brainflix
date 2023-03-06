@@ -11,8 +11,8 @@ function VideoList({SelectedVideo, videosDetailId}) {
     const [videos] = useState(VideosData);
 
     return (
-        <section className='Video__list'>
-        <h3 className='Video__list__title'>next videos</h3>
+        <section className='video__list'>
+        <h3 className='video__list__title'>next videos</h3>
         <ul>
             {videos
             .filter((video) => (video.id !== videosDetailId))

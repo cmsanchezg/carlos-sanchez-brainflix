@@ -6,7 +6,7 @@ function CommentsList ({videosDetail}) {
 
     return (
         <>
-        <ul className='comment'>
+        <ul className='comment__list'>
             <CommentCard videosDetail={videosDetail} />
         </ul>
         </>

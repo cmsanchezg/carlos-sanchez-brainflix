@@ -5,14 +5,14 @@ import MuhanMuruge from '../../assets/images/Images/Mohan-muruge.jpg';
 
 function Header () {
     return (
-        <header className='Header'>
-            <img className='Header__logo' src={Logo} alt="BrainFlix Logo"/>
-            <div className='Header__right'>
-                <form className='Header__form' action="">
-                    <input className='Header__input' type="text" placeholder='Search' />
+        <header className='header'>
+            <img className='header__logo' src={Logo} alt="BrainFlix Logo"/>
+            <div className='header__right'>
+                <form className='header__form' action="">
+                    <input className='header__input' type="text" placeholder='Search' />
                 </form>
-                <img className='Header__MohanMuruge' src={MuhanMuruge} alt="Muhan Muruge" />
-                <a className='Header__upload__btn' href="google.com">Upload</a>
+                <img className='header__mohanmuruge' src={MuhanMuruge} alt="Muhan Muruge" />
+                <a className='header__upload__btn' href="google.com">Upload</a>
             </div>
         </header>
     );

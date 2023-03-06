@@ -1,37 +1,38 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.Video__card {
-    
-    &__item {
-        display: flex;
-        list-style: none;
-        gap: 1rem;
-        margin: 8px 0px;
+.video__card {
+    display: flex;
+    list-style: none;
+    margin: .5rem 0rem;
+    @include tablet {
+        margin: 1.5rem 0rem;
     }
 
     &__image {
-        width: 100px;
-        height: 60px;
+        width: 6.875rem;
+        height: 4.0625rem;
+        object-fit: cover;
         border-radius: 4px;
+        margin-right: 1rem;
     }
 
     &__content {
-        width: 60%;
-        font-size: 13px;
-        line-height: 18px;
+        width: 50%;
+        font-size: .75rem;
+        line-height: 1.125rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include tablet {
+            font-size: .8125rem;
+            width: 12.1875rem;
+        }
     }
 
     &__title {
         font-weight: 600;
-        line-height: 18px;
-        // height: 36px;
-        // overflow: hidden;
-        // white-space: wrap;
-        // // text-overflow: ellipsis;
+        line-height: 1.125rem;
     }
 
     &__channel {

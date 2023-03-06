@@ -1,6 +1,110 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.Current__video {
-    padding: 24px 16px;
+.current__video {
+    margin: 1rem 1rem .5rem;
+    @include tablet {
+        margin: 1.5rem 2.25rem .75rem;
+    }
+    @include desktop {
+        margin: 1.5rem 0rem .75rem;
+    }
+
+    &__title {
+        color: $primary-first;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        border-bottom: 1.5px solid $secondary-third;
+        @include tablet {
+            font-size: 2.0625rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            padding-bottom: 0rem;
+            border: none;
+
+        }
+    }
+
+    &__info {
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        padding: 1rem 0rem;
+        border-bottom: 1.5px solid $secondary-third;
+        display: flex;
+        flex-wrap: wrap;
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            font-weight: 400;
+            padding: .625rem 0rem;
+            flex-wrap: nowrap;
+        }
+        @include desktop {
+            padding-right: 2.25rem;
+        }
+    }
+    
+    &__channel {
+        color: $primary-first;
+        font-weight: 600;
+        width: 50%;
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-bottom: 0rem;
+            width: 15%;
+        }
+    }
+
+    &__views {
+        color: $primary-third; 
+        width: 50%;
+        background-image: url(../../assets/images/Icons/views.svg);
+        background-repeat: no-repeat;
+        padding-left: 1.875rem;
+        @include tablet {
+            order: 3;
+            width: 15%;
+            margin-left: auto;
+            // margin-right: .75rem;
+        }
+    }
+
+    &__timestamp {
+        color: $primary-third; 
+        width: 50%;
+        @include tablet {
+            order: 2;
+            width: 15%;
+        }
+    }
+
+    &__likes {
+        color: $primary-third; 
+        width: 50%;
+        background-image: url(../../assets/images/Icons/likes.svg);
+        background-repeat: no-repeat;
+        padding-left: 1.875rem;
+        @include tablet {
+            order: 4;
+            width: 15%;
+        }
+    }
+
+    &__description {
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        margin: 1rem 0rem;
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            margin: 1.5rem 0rem;
+        }
+        @include desktop {
+            padding-right: 2.25rem;
+        }
+    }
 }

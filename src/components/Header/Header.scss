@@ -1,24 +1,24 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.Header {
-    padding: 24px 16px;
+.header {
+    padding: 1.5rem 1rem 1rem;
     text-align: center;
     @include tablet {
-        padding: 36px 24px;
+        padding: 2.25rem 2.25rem .5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     @include desktop {
-        padding: 36px 125px;
+        padding: 2.25rem 8.75rem .5rem;
     }
 
     &__logo {
         background-color: white;
-        width: 120px;
-        height: 25px;
-        margin-bottom: 16px;
+        width: 7.5rem;
+        height: 1.5625rem;
+        margin-bottom: 1rem;
     }
 
     &__right {
@@ -38,7 +38,7 @@
     }
 
     &__form {
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         width: 80%;
         @include tablet {
             width: 65%;
@@ -48,31 +48,31 @@
     &__input {
         background-image: url(../../assets/images/Icons/search.svg);
         background-repeat: no-repeat;
-        height: 36px;
+        height: 2.25rem;
         background-position-x: 4%;
         background-position-y: center;
-        background-size: 16px;
+        background-size: 1rem;
         background-color: $secondary-fourth;
         width: 100%;
         border-radius: 4px;
         border: 1px solid $secondary-third;
-        padding: 12px;
-        padding-left: 45px;
-        font-size: 10px;
-        line-height: 20px;
+        padding: .75rem;
+        padding-left: 1.5rem;
+        font-size: .75rem;
+        line-height: 1.25rem;
         font-weight: 400;
         @include tablet {
-            height: 40px;
-            padding: 16px;
-            padding-left: 35px;
-            font-size: 12px;
+            height: 2.5rem;
+            padding: 1rem;
+            font-size: .875rem;
         }
         &::placeholder {
             color: $primary-first;
+            padding-left: 1.25rem;
         }
     }
 
-    &__MohanMuruge {
+    &__mohanmuruge {
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
@@ -89,24 +89,24 @@
         background-repeat: no-repeat;
         background-position-x: 4%;
         background-position-y: center;
-        background-size: 16px;
+        background-size: 1rem;
         background-color: $primary-second;
         border-radius: 4px;
-        padding: 0px 32px;
-        height: 40px;
+        padding: 0rem 2rem;
+        height: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $primary-fourth;
-        font-size: 10px;
-        line-height: 20px;
+        font-size: .75rem;
+        line-height: 1.25rem;
         font-weight: 600;
         text-decoration: none;
         text-transform: uppercase;
         width: 100%;
         @include tablet {
-            background-size: 18px;
-            font-size: 12px;
+            background-size: 1.125rem;
+            font-size: .875rem;
             width: 35%;
         }
         

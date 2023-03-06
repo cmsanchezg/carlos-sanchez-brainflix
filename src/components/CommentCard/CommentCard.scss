@@ -1,32 +1,27 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.comment {
+.comment__card {
     
-    // @include tablet {
-    //     padding: 0rem 6rem;
-    
-    // @include desktop {
-    //     padding: 0rem 24.375rem;
-    //     }
-    // }
-
     &__item {
         border-bottom: 1.5px solid $secondary-third;
-        padding: 16px 0px;
+        padding: 1rem 0px;
         display: flex;
+        @include desktop {
+            padding-right: 2.25rem;
+        }
     }
 
     &__user__image {
         margin-right: 1rem;
-        height: 36px;
-        width: 36px;
+        height: 2.25rem;
+        width: 2.25rem;
         border-radius: 50%;
         background-color: $secondary-third;
         
         @include tablet {
-            height: 40px;
-            width: 40px;
+            height: 2.5rem;
+            width: 2.5rem;
         }
     }
 
@@ -37,12 +32,13 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        font-size: 13px;
-        line-height: 18px;
-        margin-bottom: 8px;
-        // @include tablet {
-        //     font-size: 0.875rem;
-        // }
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        margin-bottom: .5rem;
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+        }
     }
 
     &__user__name {
@@ -51,13 +47,17 @@
     }
 
     &__timestamp {
-        color: $secondary-third;
+        color: $primary-third;
         font-weight: 400;
     }
 
     &__text {
-        font-size: 13px;
-        line-height: 18px;
+        font-size: .8125rem;
+        line-height: 1.125rem;
         font-weight: 400;
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+        }
     }
 }
