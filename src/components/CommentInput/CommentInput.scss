@@ -106,6 +106,9 @@
         text-decoration: none;
         text-transform: uppercase;
         width: 100%;
+        &:hover {
+            background-color: $secondary-second;
+        } 
         @include tablet {
             font-size: .875rem;
             width: 30%;
