@@ -2,10 +2,8 @@ import { useState } from 'react';
 
 import './App.scss';
 
-import VideoDetail from './components/VideoDetail/VideoDetail';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import VideoList from './components/VideoList/VideoList';
+import Home from './pages/Home/Home';
 
 
 import VideosDetailData from './data/video-details.json';
@@ -22,11 +20,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero videosDetail={videosDetail} />
-      <main className='main'>
-        <VideoDetail videosDetail={videosDetail} />
-        <VideoList videosDetailId={videosDetail.id} SelectedVideo={SelectedVideo} />
-      </main>
+      <Home />
     </>
   );
 }
