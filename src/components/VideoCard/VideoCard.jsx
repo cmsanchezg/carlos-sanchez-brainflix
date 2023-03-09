@@ -1,18 +1,20 @@
 import './VideoCard.scss';
 
-function VideoCard({video, SelectedVideo}) {
+import { Link } from 'react-router-dom';
 
-    function handleVideoClick(id) {
-        SelectedVideo(id);
-    }
+function VideoCard({ videoId, image, title, channel}) {
 
     return (
-        <li className='video__card' onClick={() => handleVideoClick(video.id)}>
-            <img className='video__card__image' src={video.image} alt="" />
-            <div className='video__card__content'>
-                <h3 className='video__card__title'>{video.title}</h3>
-                <h4 className='video__card__channel'>{video.channel}</h4>
-            </div>
+        <li className='video__card'>
+        <Link className='video__card__link' to={`/videos/${videoId}`}>
+        
+        <img className='video__card__image' src={image} alt="" />
+        <div className='video__card__content'>
+            <h3 className='video__card__title'>{title}</h3>
+            <h4 className='video__card__channel'>{channel}</h4>
+        </div>
+        
+        </Link>
         </li>
     );
 }

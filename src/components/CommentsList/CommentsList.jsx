@@ -2,12 +2,12 @@ import './CommentsList.scss';
 
 import CommentCard from '../CommentCard/CommentCard';
 
-function CommentsList ({videosDetail}) {
+function CommentsList ({currentVideo}) {
 
     return (
         <>
         <ul className='comment__list'>
-            <CommentCard videosDetail={videosDetail} />
+            <CommentCard currentVideo ={currentVideo} />
         </ul>
         </>
     );

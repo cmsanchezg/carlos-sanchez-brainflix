@@ -2,12 +2,17 @@
 @use '../../styles/partials/mixins' as *;
 
 .comment__card {
-    
+
     &__item {
+        padding: 1rem 0rem;
+        margin: 0rem 1rem;
         border-bottom: 1.5px solid $secondary-third;
-        padding: 1rem 0px;
         display: flex;
+        @include tablet {
+            margin: 0rem 2.25rem;
+        }
         @include desktop {
+            margin: 0rem;
             padding-right: 2.25rem;
         }
     }

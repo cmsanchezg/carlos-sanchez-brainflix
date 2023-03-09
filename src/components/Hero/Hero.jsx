@@ -1,14 +1,14 @@
 import './Hero.scss';
 
-function Hero({videosDetail}) {
+function Hero({currentVideo}) {
     
     return (
         <section className='hero'>
             <video controls
                 className='hero__video'
-                key={videosDetail.id}
-                poster={videosDetail.image}
-                src={videosDetail.video}>
+                key={currentVideo.id}
+                poster={currentVideo.image}
+                src={currentVideo.video}>
             </video>
         </section> 
     );

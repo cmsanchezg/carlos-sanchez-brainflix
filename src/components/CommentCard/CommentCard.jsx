@@ -1,10 +1,10 @@
 import './CommentCard.scss';
 
-function CommentCard ({videosDetail}) {
+function CommentCard ({currentVideo}) {
 
     return (
-      <div>  
-      {videosDetail.comments
+      <section className='comment__card'>  
+      {currentVideo.comments
       .map((comment) => (
         
         <li className='comment__card__item' key={comment.id}>
@@ -20,7 +20,7 @@ function CommentCard ({videosDetail}) {
         </div>
         </li>
       ))}
-      </div>
+      </section>
     );
 }
 

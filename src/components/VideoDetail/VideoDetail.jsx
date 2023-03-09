@@ -3,23 +3,25 @@ import CommentsList from '../CommentsList/CommentsList';
 
 import './VideoDetail.scss';
 
-function VideoDetail ({videosDetail}) {
+function VideoDetail ({ currentVideo, videosDetail}) {
 
     return (
-        <section className='current__video'>
-                <h1 className='current__video__title'>{videosDetail.title}</h1>
+        <div>
+            <section className='current__video' key={currentVideo.id}>
+                <h1 className='current__video__title'>{currentVideo.title}</h1>
                 <div className='current__video__info'>
-                    <p className='current__video__channel'>By {videosDetail.channel}</p>
-                    <p className='current__video__views'>{videosDetail.views}</p>
-                    <p className='current__video__timestamp'>{new Date(videosDetail.timestamp).toLocaleDateString("en-US",{year:"numeric",month:"2-digit",day:"2-digit"})}</p>
-                    <p className='current__video__likes'>{videosDetail.likes}</p>
+                    <p className='current__video__channel'>By {currentVideo.channel}</p>
+                    <p className='current__video__views'>{currentVideo.views}</p>
+                    <p className='current__video__timestamp'>{new Date(currentVideo.timestamp).toLocaleDateString("en-US",{year:"numeric",month:"2-digit",day:"2-digit"})}</p>
+                    <p className='current__video__likes'>{currentVideo.likes}</p>
                 </div>
-                <p className='current__video__description'>{videosDetail.description}</p>
-                <p className='current__video__count'>{videosDetail.comments.length} Comments</p>
-
-                <CommentInput videosDetail={videosDetail} />
-                <CommentsList videosDetail={videosDetail} />       
-        </section>
+                <p className='current__video__description'>{currentVideo.description}</p>
+                <p className='current__video__count'>{currentVideo.comments?.length} Comments</p>
+            </section>      
+            
+            <CommentInput videosDetail={videosDetail} />
+            <CommentsList currentVideo ={currentVideo} />  
+        </div>
     );
 }
 
