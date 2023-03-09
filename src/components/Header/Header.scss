@@ -5,13 +5,13 @@
     padding: 1.5rem 1rem 1rem;
     text-align: center;
     @include tablet {
-        padding: 2.25rem 2.25rem .5rem;
+        padding: 1.5rem 2.25rem .5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     @include desktop {
-        padding: 2.25rem 8.75rem .5rem;
+        padding: 1.5rem 8.75rem .5rem;
     }
 
     &__logo {

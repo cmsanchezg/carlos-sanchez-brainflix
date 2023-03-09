@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 function VideoCard({ videoId, image, title, channel}) {
 
     return (
-        <li className='video__card'>
-        <Link className='video__card__link' to={`/videos/${videoId}`}>
+        <li className='video__card' onClick={(event) => {
+            event.preventDefault();
+            window.location.replace ("#hero");
+        }}>
+        <Link className='video__card__link' to={`/videos/${videoId}`} >
         
         <img className='video__card__image' src={image} alt="" />
         <div className='video__card__content'>

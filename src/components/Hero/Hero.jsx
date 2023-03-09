@@ -3,7 +3,7 @@ import './Hero.scss';
 function Hero({currentVideo}) {
     
     return (
-        <section className='hero'>
+        <section id='hero' className='hero'>
             <video controls
                 className='hero__video'
                 key={currentVideo.id}
