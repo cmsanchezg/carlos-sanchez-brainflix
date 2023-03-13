@@ -20,15 +20,10 @@ function HomePage() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const {videoId} = useParams();
   
-  // function SelectedVideo(id) {
-  //     let newHeroVideo = VideosDetailData.find((video) => video.id === id)
-  //     setVideosDetail(newHeroVideo);
-  // }
 
   useEffect(() => {
     getVideosList();
-}, []);
-
+  }, []);
 
   useEffect(() => {
     getVideos();

@@ -1,3 +1,47 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.not__found__page {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1.5px solid $secondary-third;
+    @include tablet {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+    
+    &__home__btn {
+        background-color: $primary-second;
+        border-style: none;
+        border-radius: 4px;
+        height: 2.5rem;
+        color: $primary-fourth;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        &:hover {
+            background-color: $secondary-second;
+        } 
+        @include tablet {
+            font-size: .875rem;
+            width: 30%;
+        }
+        @include desktop {
+            width: 25%;
+        }
+    }
+
+    &__image {
+        width: 60%;
+        @include desktop {
+            width: 50%;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import CommentsList from '../CommentsList/CommentsList';
 
 import './VideoDetail.scss';
 
-function VideoDetail ({ currentVideo, videosDetail}) {
+function VideoDetail ({ currentVideo, videosDetail, addComment}) {
 
     return (
         <div>
@@ -19,7 +19,7 @@ function VideoDetail ({ currentVideo, videosDetail}) {
                 <p className='current__video__count'>{currentVideo.comments?.length} Comments</p>
             </section>      
             
-            <CommentInput videosDetail={videosDetail} />
+            <CommentInput videosDetail={videosDetail} addComment={addComment} />
             <CommentsList currentVideo ={currentVideo} />  
         </div>
     );
