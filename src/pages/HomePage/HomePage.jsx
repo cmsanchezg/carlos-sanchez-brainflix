@@ -8,22 +8,15 @@ import VideoDetail from '../../components/VideoDetail/VideoDetail';
 import Hero from '../../components/Hero/Hero';
 import VideoList from '../../components/VideoList/VideoList';
 
-export const api = "https://project-2-api.herokuapp.com";
-export const apiKey = "3b8c6741-ddde-4934-8174-9ff3b241b3e5";
+export const api = "http://localhost:8090";
+// export const apiKey = "3b8c6741-ddde-4934-8174-9ff3b241b3e5";
 
 
 function HomePage() {
 
-  const [videosList, setVideoList] = useState([]);
-
   const [videosDetail, setVideosDetail] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
   const {videoId} = useParams();
-  
-
-  useEffect(() => {
-    getVideosList();
-  }, []);
 
   useEffect(() => {
     getVideos();
@@ -37,21 +30,10 @@ function HomePage() {
         getVideo(videosDetail[0].id);
     }
   }, [videoId, videosDetail]);
-
-  function getVideosList() {
-    axios
-    .get(`${api}/videos?api_key=${apiKey}`)
-    .then ((response) => {
-        setVideoList(response.data);
-    })
-    .catch((error) => {
-        console.log("error", error);
-    });
-}  
-
+  
 function getVideos () {
     axios
-    .get(`${api}/videos?api_key=${apiKey}`)
+    .get(`${api}/videos`)
     .then((response) => {
         setVideosDetail(response.data);
     })
@@ -62,7 +44,7 @@ function getVideos () {
 
 function getVideo(videoId) {
   axios
-  .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+  .get(`${api}/videos/${videoId}`)
   .then ((res) => {
       setCurrentVideo(res.data);
   })
@@ -72,7 +54,7 @@ function getVideo(videoId) {
 }
 
   return (    
-    currentVideo && videosList.length?
+    currentVideo && videosDetail.length?
     <>
 
       <Hero currentVideo={currentVideo} />

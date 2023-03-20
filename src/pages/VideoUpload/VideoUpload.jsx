@@ -1,4 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+import { Link, useNavigate } from "react-router-dom";
 
 import "../VideoUpload/VideoUpload.scss";
 import UploadImage from "../../assets/images/Images/Upload-video-preview.jpg";
@@ -24,12 +26,22 @@ function VideoUpload() {
             }, 200)
             return;
         } else {
-            alert("Thank you for submitting your video")
-            navigate("/")
+            axios
+            .post("http://localhost:8090/videos", {
+                title:title.value,
+                description:description.value,
+            })
+            .then ((response) => {
+                alert("Thank you for submitting your video")
+                navigate("/")
+            })
+            .catch((error) => {
+                console.log("error", error);
+            });
         }
-    }
+}
 
-    return (
+return (
         <section className="video__upload">
             <h1 className="video__upload__header">Upload Video</h1>
 
@@ -49,11 +61,23 @@ function VideoUpload() {
                 </div>
                 <div className="video__upload__buttons">
                     <button className='video__upload__publish__btn'>publish</button>
-                    <button className='video__upload__cancel__btn'>cancel</button>
+                    <Link to={"/"} className='video__upload__cancel__btn'>cancel</Link>
                 </div>
             </form>
         </section>
     );
 }
 
-export default VideoUpload
+// function postVideo() {
+//     axios
+//     .post(`${api}/videos`)
+//     .then ((response) => {
+//         console(response.data);
+//         setVideoList(response.data);
+//     })
+//     .catch((error) => {
+//         console.log("error", error);
+//     });
+// };  
+
+export default VideoUpload;

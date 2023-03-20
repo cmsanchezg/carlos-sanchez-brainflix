@@ -145,6 +145,7 @@
 
         &:hover {
             background-color: $secondary-second;
+            cursor: pointer;
         }
 
         @include tablet {
@@ -176,6 +177,7 @@
         &:hover {
             color: $primary-fourth;
             background-color: $secondary-second;
+            cursor: pointer;
         }
 
         @include tablet {

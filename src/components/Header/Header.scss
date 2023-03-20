@@ -106,6 +106,7 @@
         width: 100%;
         &:hover {
             background-color: $secondary-second;
+            cursor: pointer;
         } 
         @include tablet {
             background-size: 1.125rem;
